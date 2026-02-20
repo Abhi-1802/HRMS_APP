@@ -24,7 +24,6 @@ def mark_attendance(db: Session, data: AttendanceCreate):
     return record
 
 
-# ✅ Filter attendance by employee + optional date range
 def get_attendance_filtered(
     db: Session,
     emp_id: int,
@@ -42,7 +41,6 @@ def get_attendance_filtered(
     return query.order_by(Attendance.date.desc()).all()
 
 
-# ✅ Total present days per employee
 def get_total_present_days(db: Session, emp_id: int):
     count = (
         db.query(func.count(Attendance.id))

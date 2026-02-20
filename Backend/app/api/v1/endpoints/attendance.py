@@ -14,7 +14,7 @@ def mark_attendance(data: AttendanceCreate, db: Session = Depends(get_db)):
     return attendance_service.mark_attendance(db, data)
 
 
-# ✅ Filter by date range
+
 @router.get("/{emp_id}")
 def get_attendance(
     emp_id: int,
