@@ -34,6 +34,11 @@ Deployment:
 ## ⚙️ Run Locally
 First create and activate venv
 
+### Frontend
+
+npm install
+npm run dev 
+
 ### Backend
 
 ```bash
